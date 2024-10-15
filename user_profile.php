@@ -17,7 +17,7 @@
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="appointment_records.php">Appointments</a></li>
+                <li><a href="appointment_records.php">My Appointments</a></li>
                 <li><a href="validation/logout_user.php">Logout</a></li>
             </ul>
         </nav>
@@ -40,7 +40,7 @@
             </div>
         </div>
         <div class="appointment-history">
-            <h2>Appointment History</h2>
+            <h2>Recent Appointments</h2>
             <ul>
                 <li>
                     <h3>Appointment with Dr. Smith</h3>
