@@ -8,7 +8,15 @@
 <body>
     <h1>This is an index page</h1>
     <h2>
-        <a href="login.php">Login</a>
+        <button id="login-btn">Login</button>
     </h2>
+    <script>
+        const login_btn = document.querySelector("#login-btn");
+
+        login_btn.addEventListener('click', () => {
+            window.location.href = "login.php";
+        })
+        
+    </script>
 </body>
 </html>
