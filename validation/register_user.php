@@ -13,6 +13,6 @@
         $address = $_POST['address'];
 
         $user -> addUser($name, $email, $pass, $mobileNo, $address);
-        header("Location: ../login.php");
+        header("Location: ../signup_confirmation_page.html");
     }
 ?>

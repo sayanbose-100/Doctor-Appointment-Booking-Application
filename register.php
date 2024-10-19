@@ -20,7 +20,8 @@
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" id="password" name="password" required />
+          <input type="password" id="password" name="password" required/>
+          <!-- <button id="show-pass">Show</button> -->
         </div>
         <div class="form-group" id="password-confirm">
           <label for="confirm-password">Confirm Password</label>
@@ -47,8 +48,9 @@
       </p>
     </div>
 
-    <!-- validating the confirm password part -->
     <script>
+
+        // validating the confirm password part
         function checkPass(inputPass, confirmPass) {
             console.log(`${inpPass} ${confirmPass}`);
             return inputPass === confirmPass;
@@ -83,6 +85,36 @@
             }
         })
         pass_div.appendChild(textNode);
+
+        // show Password
+
+        // const generate_HashPass = (len) => {
+        //   let genPass = "";
+        //   for(var i = 0; i < len; i++) {
+        //     genPass += "*";
+        //   }
+        //   console.log(genPass);
+        //   return genPass;
+        // }
+
+
+        // const pass = document.querySelector("#password");
+        // let password = "";
+        // let genPass = "";
+        // pass.addEventListener('change', (e) => {
+        //   password = e.target.value;
+        //   console.log(password);
+        //   genPass = generate_HashPass(password.length);
+        // })
+
+        // pass.addEventListener('input', () => {
+        //   pass.innerHTML = genPass;
+        // })
+
+        // const showPass = document.querySelector("#show-pass");
+        // showPass.addEventListener('keydown', () => {
+
+        // })
     </script>
   </body>
 </html>

@@ -30,10 +30,10 @@
         ?>
         <div class="profile-card">
             <div class="profile-image">
-            <img src="static/user_profile_pics/profile_pic.webp" alt="Profile Picture">
+                <img src="static/user_profile_pics/profile_pic.webp" alt="Profile Picture">
             </div>
             <div class="profile-info">
-                <h2><?php echo $curr_user['name']; ?></h2>
+                <h2><?php echo $curr_user['name'] ?></h2>
                 <p>Email: <?php echo $curr_user['email'] ?></p>
                 <p>Phone: <?php echo $curr_user['phone'] ?></p>
                 <p>Address: <?php echo $curr_user['address'] ?></p>

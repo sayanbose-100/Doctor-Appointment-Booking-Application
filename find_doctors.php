@@ -51,46 +51,55 @@
         <div class="doctors-container">
           <?php
             if(isset($_GET['search'])) {
+                
                 if(isset($_GET['doc_name'])) {
-                    $name = $_GET['doc_name'];
                     $doctorByname = $doctor -> getDoctorByName($name);
                     foreach ($doctorByname as $index => $doctor):
+                        print_r($doctor);
+                        $name = $doctor['doc_name'];
+                        $specialization = $doctor['specialization'];
+                        $days = $doctor['days_available'];
+                        $contact = $doctor['contact_number'];
                         echo "<div class='doctor-card'>
                             <img src='doctor1.jpg' alt='Doctor 1'>
-                            <h2>".$doctor['name']."</h2>
-                            <p>Speciality:".$doctor['specialization']."</p>
-                            <p>Available Days:".$doctor['days_available']."</p>
-                            <p>Contact:".$doctor['contact_number']."</p>
+                            <h2>".$name."</h2>
+                            <p>Speciality:".$specialization."</p>
+                            <p>Available Days:".$days."</p>
+                            <p>Contact:".$contact."</p>
                             <button class='bookBtn' id='book-btn'>Book Now</button>
                             </div>";
                     endforeach;
                 }
                 else {
-                    echo "<h2> Please enter a name to search. </h2>";
+                    echo "<h2>Please enter a name to search</h2>";
                 }
                 
             }
             if(isset($_GET["showAll_docs"])) {
                 $doctors = $doctor -> getAllDoctors();
                 foreach ($doctors as $index => $doctor):
+                    $name = $doctor['name'];
+                    $specialization = $doctor['specialization'];
+                    $days = $doctor['days_available'];
+                    $contact = $doctor['contact_number'];
                     echo "<div class='doctor-card'>
                     <img src='doctor1.jpg' alt='Doctor 1'>
-                    <h2>".$doctor['name']."</h2>
-                    <p>Speciality:".$doctor['specialization']."</p>
-                    <p>Available Days:".$doctor['days_available']."</p>
-                    <p>Contact:".$doctor['contact_number']."</p>
-                    <button class='bookBtn' id='book-btn'>Book Now</button>
+                    <h2>".$name."</h2>
+                    <p>Speciality:".$specialization."</p>
+                    <p>Available Days:".$days."</p>
+                    <p>Contact:".$contact."</p>
+                    <form action='bookAppointment.php'>
+                        <input type='text' style='display: none;' name='doc_name' value='".$name."' >
+                        <input type='text' style='display: none;' name='specialization' value='".$specialization."' >
+                        <input type='text' style='display: none;' name='contact' value='".$contact."' >
+                        <input type='text' style='display: none;' name='days' value='".$days."' >
+                        <button class='bookBtn' id='book-btn' type='submit' name='book-btn'>Book Now</button>
+                    </form>
                     </div>";
                 endforeach;
             }
           ?>
         </div>
     </main>
-    <script>
-        const apt_book_btn = document.querySelector("#book-btn");
-        apt_book_btn.addEventListener('click', () => {
-            window.location.href = "bookAppointment.php";
-        })
-    </script>
 </body>
 </html>

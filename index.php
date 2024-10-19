@@ -21,6 +21,7 @@
         <ul>
           <li><a href="index.php">Home</a></li>
           <li><a href="find_doctors.php">Find Doctors</a></li>
+          <li><a href="#">Buy Medicines</a></li>
           <?php if(array_key_exists('username',$_SESSION)) { ?>
           <li><a href="user_profile.php">Profile</a></li>
           <?php } else { ?>
@@ -33,8 +34,8 @@
       <!-- retrieving all the doctors to display on the index page -->
       <?php
             $doctor = new Doctor($db);
-            $doctors = $doctor ->
-      getAllDoctors(); ?>
+            $doctors = $doctor -> getAllDoctors(); 
+      ?>
 
       <h1 style="text-align: center">Our Doctors</h1>
       <div class="doctors-container">

@@ -5,7 +5,7 @@ class Amwell {
             $db_name = "doctor_appointment";  
             $localhost = "localhost";  
             $username = "root";
-            $password = "admin"; 
+            $password = "root"; 
             $port = 3306;
 
             $con = new PDO("mysql:host=$localhost;dbname=$db_name;port=$port", $username, $password);
