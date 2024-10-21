@@ -85,36 +85,6 @@
             }
         })
         pass_div.appendChild(textNode);
-
-        // show Password
-
-        // const generate_HashPass = (len) => {
-        //   let genPass = "";
-        //   for(var i = 0; i < len; i++) {
-        //     genPass += "*";
-        //   }
-        //   console.log(genPass);
-        //   return genPass;
-        // }
-
-
-        // const pass = document.querySelector("#password");
-        // let password = "";
-        // let genPass = "";
-        // pass.addEventListener('change', (e) => {
-        //   password = e.target.value;
-        //   console.log(password);
-        //   genPass = generate_HashPass(password.length);
-        // })
-
-        // pass.addEventListener('input', () => {
-        //   pass.innerHTML = genPass;
-        // })
-
-        // const showPass = document.querySelector("#show-pass");
-        // showPass.addEventListener('keydown', () => {
-
-        // })
     </script>
   </body>
 </html>

@@ -1,4 +1,5 @@
 <?php
+session_start();
 class Amwell {
     public static function connect() {
         try {

@@ -10,12 +10,19 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background-color: #333;
+    background-color: #16423C;
     color: #fff;
 }
 
 .brand {
     font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.brand img {
+    height: 40px;
 }
 nav {
     width: 100%;
@@ -28,7 +35,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-end; /* Align items to the right */
+    justify-content: flex-end;
 }
 
 nav ul li {
@@ -36,6 +43,7 @@ nav ul li {
 }
 
 nav ul li a {
+    font-weight: 600;
     text-decoration: none;
     color: #fff;
 }
@@ -72,7 +80,7 @@ button {
     border-radius: 5px;
 }
 .form-btn {
-    background-color: #3e9cff;
+    text-align: center;
 }
 .bookBtn {
     background-color: #008c36;
@@ -98,4 +106,57 @@ button {
     height: 150px;
     border-radius: 50%;
     margin-bottom: 10px;
+}
+
+footer {
+    background-color: #16423C;
+    width: 100%;
+    height: 100%;
+    font-size: 13px;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: #b6b6b6;
+}
+
+.footer-container {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.social-media {
+    margin-top: 20px;
+    text-align: center;
+}
+.social-media  button {
+    background: transparent;
+    border-radius: 50%;
+    border: none;
+}
+.social-media  button  img {
+    height: 30px;
+}
+.sitemap {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.sitemap-links {
+    text-align: center;
+}
+.sitemap-links a {
+    text-decoration: none;
+    color: #b6b6b6;
+}
+.sitemap-links a:hover {
+    color: #ff7580;
+}
+#sitemap-head {
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
 }

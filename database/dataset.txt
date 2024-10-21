@@ -77,3 +77,13 @@ Insert into doctor_appointment.users(phone, address) values (9789696059,'23/1,Ch
 Insert into doctor_appointment.users(phone, address) values (9789664536,'41,Southern Avenue');
 truncate doctor_appointment.users;
 delete from doctor_appointment.users where name = "Sumana Bose";
+
+create table appointments (
+	app_id int PRIMARY KEY AUTO_INCREMENT,
+    doc_id INT NOT NULL,
+    uid INT NOT NULL,
+    appointment_date date,
+    appointment_time VARCHAR(20),
+    FOREIGN KEY (doc_id) REFERENCES doctors(doc_id),
+    FOREIGN KEY (uid) REFERENCES users(uid)
+);
